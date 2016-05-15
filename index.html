@@ -8,7 +8,7 @@
 <!-- Load d3plus.js -->
 <script src="http://www.d3plus.org/js/d3plus.js"></script>
 
-<div id="viz"></div>
+<div id="viz" style="width:600px; height:400px;"></div>
 
 <script type="text/javascript">
 // load your data
@@ -36,7 +36,7 @@
   var visualization = d3plus.viz()
     .container("#viz")  // container DIV to hold the visualization
     .data(sample_data)  // data to use with the visualization
-    .type("line")       // visualization type
+    .type("bar")       // visualization type
     .id("name")         // key for which our data is unique on
     .text("name")       // key to use for display text
     .y("app_lunches")         // key to use for y-axis
