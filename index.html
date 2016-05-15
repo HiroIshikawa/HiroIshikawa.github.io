@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>D3plus line plot - Storybench How To</title>
+
+<!-- Load d3.js -->
+<script src="http://www.d3plus.org/js/d3.js" charset="utf-8"></script>
+
+<!-- Load d3plus.js -->
+<script src="http://www.d3plus.org/js/d3plus.js"></script>
+
+<div id="viz"></div>
+
+<script type="text/javascript">
+// load your data
+  var sample_data = [
+    {"hour":"0","app_lunches":"10","total_running_time":"2840991","name":"clashofclans"},
+    {"hour":"1","app_lunches":"14","total_running_time":"2363100","name":"clashofclans"},
+    {"hour":"2","app_lunches":"12","total_running_time":"1951838","name":"clashofclans"},
+    {"hour":"3","app_lunches":"2","total_running_time":"502977","name":"clashofclans"},
+    {"hour":"4","app_lunches":"3","total_running_time":"299156","name":"clashofclans"},
+    {"hour":"10","app_lunches":"1","total_running_time":"171758","name":"clashofclans"},
+    {"hour":"11","app_lunches":"2","total_running_time":"917949","name":"clashofclans"},
+    {"hour":"12","app_lunches":"18","total_running_time":"4371614","name":"clashofclans"},
+    {"hour":"13","app_lunches":"11","total_running_time":"3032533","name":"clashofclans"},
+    {"hour":"14","app_lunches":"12","total_running_time":"2026170","name":"clashofclans"},
+    {"hour":"15","app_lunches":"6","total_running_time":"1181043","name":"clashofclans"},
+    {"hour":"16","app_lunches":"11","total_running_time":"1783189","name":"clashofclans"},
+    {"hour":"17","app_lunches":"7","total_running_time":"1817213","name":"clashofclans"},
+    {"hour":"18","app_lunches":"10","total_running_time":"1761031","name":"clashofclans"},
+    {"hour":"20","app_lunches":"2","total_running_time":"492047","name":"clashofclans"},
+    {"hour":"21","app_lunches":"5","total_running_time":"780459","name":"clashofclans"},
+    {"hour":"22","app_lunches":"1","total_running_time":"57812","name":"clashofclans"},
+    {"hour":"23","app_lunches":"11","total_running_time":"1888740","name":"clashofclans"}
+  ]
+  // instantiate d3plus
+  var visualization = d3plus.viz()
+    .container("#viz")  // container DIV to hold the visualization
+    .data(sample_data)  // data to use with the visualization
+    .type("line")       // visualization type
+    .id("name")         // key for which our data is unique on
+    .text("name")       // key to use for display text
+    .y("app_launches")         // key to use for y-axis
+    .x("hour")          // key to use for x-axis
+    .draw()             // finally, draw the visualization!
+</script>
+
+</html>
