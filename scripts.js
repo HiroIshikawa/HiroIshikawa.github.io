@@ -30,7 +30,7 @@ var ToggleText = React.createClass({
 		return (
 			<div>
 				<h1>Hello {message}!</h1>
-				<a href" onClick={this.toggle}>Toggle</a>
+				<a href="" onClick={this.toggle}>Toggle</a>
 			</div>
 		);
 	}
